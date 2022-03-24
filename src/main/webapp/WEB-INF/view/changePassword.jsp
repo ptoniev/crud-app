@@ -10,7 +10,7 @@
 <li>
 <form method="post" action="/update-password">
   		<table> <tr><td>Enter username</td> <td><input type="text" name="username" required></td></tr>
-  		<tr><td>Enter old password</td> <td><input type="password" name="oldPassword" required></td></tr>
+  		<tr><td>Enter old password</td> <td><input type="password" name="password" required></td></tr>
  	 	<tr><td>Enter new password</td> <td><input type="password" name="newPassword" required></td></tr>
  	 	 <tr><td></td> <td><button type="submit" >Confirm changes</button></td></tr> </table> </form>
  	</li>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="73dca35f-852b-42cd-a113-9b66094a4188" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/bg/proxiad/crud/config/WebAppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bg/proxiad/crud/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bg/proxiad/crud/controllers/login/UserLoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bg/proxiad/crud/controllers/update/UserUpdatesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bg/proxiad/crud/helpers/UserHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/deletionComplete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/passwordUpdated.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/successfulCreation.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/usernameUpdated.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bg/proxiad/crud/CreateAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bg/proxiad/crud/DeleteAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bg/proxiad/crud/ReadUsers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bg/proxiad/crud/UpdateAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bg/proxiad/crud/UpdatePassword.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bg/proxiad/crud/UsernameServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bg/proxiad/crud/UsersContainer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/changePassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/changePassword.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/changeUsername.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/changeUsername.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/errorCreation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/errorCreation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/errorLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/errorLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/existingUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/existingUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/listUsersJSTL.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/listUsersJSTL.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/signUpPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/signUpPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bg/proxiad/crud/CreateAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bg/proxiad/crud/DeleteAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bg/proxiad/crud/ReadUsers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bg/proxiad/crud/UpdateAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bg/proxiad/crud/UpdatePassword.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bg/proxiad/crud/UsernameServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bg/proxiad/crud/UsersContainer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/bg.proxiad.crud/crud-app/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/bg.proxiad.crud/crud-app/pom.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="26ZCjGTVN1fmwqHlOSsTUUuQaPE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JSP" />
+    <property name="last_opened_file_path" value="$USER_HOME$/tomcat/apache-tomcat-9.0.56" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="com.poratu.idea.plugins.tomcat.setting.TomcatSettingConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\p.ivanov\eclipse-workspace\crud-app\src\main\webapp\WEB-INF\view" />
+      <recent name="C:\Users\p.ivanov\eclipse-workspace\crud-app\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
+      <option name="adminPort" value="8005" />
+      <option name="contextPath" value="/" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions" />
+      <option name="passParentEnvironmentVariables" value="true" />
+      <option name="port" value="8080" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/9.0.56" />
+          <option name="number" value="0" />
+          <option name="path" value="C:\Users\p.ivanov\tomcat\apache-tomcat-9.0.56" />
+          <option name="version" value="9.0.56.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
+      <option name="adminPort" value="8005" />
+      <option name="contextPath" />
+      <option name="docBase" />
+      <option name="envOptions" />
+      <option name="passParentEnvironmentVariables" value="true" />
+      <option name="port" value="8080" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.0.16" />
+          <option name="number" value="0" />
+          <option name="path" value="C:\Users\p.ivanov\apache-tomcat-10.0.16" />
+          <option name="version" value="10.0.16.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73dca35f-852b-42cd-a113-9b66094a4188" name="Changes" comment="" />
+      <created>1647621855961</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647621855961</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

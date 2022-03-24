@@ -14,7 +14,7 @@ Successfully logged in.
 <li><a href="/">Log out</a></li>
 <br>
 <li>
-<form method="post" action="/delete-account?uname=${param.uname}">
+<form method="post" action="/delete-account">
   <button type="submit" >Delete account</button> </form> </li>
 <br>
 <li><a href="/update-username">Change username</a></li> 

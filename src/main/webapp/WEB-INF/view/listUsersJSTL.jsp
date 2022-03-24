@@ -9,8 +9,8 @@
 </head>
 <body>
 <c:choose>
-<c:when test="${mapUsers!=null}">
-<c:forEach var="entry" items="${mapUsers}">
+<c:when test="${usersMap!=null}">
+<c:forEach var="entry" items="${usersMap}">
 User name: <c:out value="${entry.key}"/>,
  Password: <c:out value="${entry.value}"/>
 <br>
