@@ -8,7 +8,7 @@
 </head>
 <body>
 <div align = "center">
-Wrong username or password.
+<p> Something went wrong... please contact support at ... </p>
 </div>
 </body>
 </html>

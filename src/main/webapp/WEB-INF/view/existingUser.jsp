@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div align = "center">
 Successfully logged in.
 <p>  </p>
 <ul>
@@ -20,5 +21,6 @@ Successfully logged in.
 <li><a href="/update-username">Change username</a></li> 
 <li><a href="/update-password">Change password</a></li> 
 </ul>
+</div>
 </body>
 </html>

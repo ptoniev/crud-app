@@ -8,6 +8,7 @@
 <title>List of users</title>
 </head>
 <body>
+<div align = "center">
 <c:choose>
 <c:when test="${usersMap!=null}">
 <c:forEach var="entry" items="${usersMap}">
@@ -21,5 +22,6 @@ User name: <c:out value="${entry.key}"/>,
 </c:out>
 </c:otherwise>
 </c:choose>
+</div>
 </body>
 </html>

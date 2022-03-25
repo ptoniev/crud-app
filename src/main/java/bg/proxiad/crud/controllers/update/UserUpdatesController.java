@@ -1,5 +1,6 @@
 package bg.proxiad.crud.controllers.update;
 
+import bg.proxiad.crud.exceptions.RecordNotFoundException;
 import bg.proxiad.crud.helpers.UserHelper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,12 +26,11 @@ public class UserUpdatesController {
     public ModelAndView updatePassword(HttpServletRequest req)
             throws ServletException, IOException {
         ModelAndView mv = new ModelAndView("passwordUpdated");
-        if(helper.checkUserInfo(req)) {
+        if(helper.checkUserInput(req)) {
             helper.updatePassword(req);
             return mv;
         } else {
-            mv.setViewName("errorLogin");
-            return mv;
+            throw new RecordNotFoundException();
         }
     }
 
@@ -46,12 +46,11 @@ public class UserUpdatesController {
     public ModelAndView updateUsername(HttpServletRequest req)
             throws ServletException, IOException {
         ModelAndView mv = new ModelAndView("usernameUpdated");
-        if(helper.checkUserInfo(req)) {
+        if(helper.checkUserInput(req)) {
             helper.updateUsername(req);
             return mv;
         } else {
-            mv.setViewName("errorLogin");
-            return mv;
+            throw new RecordNotFoundException();
         }
 
     }

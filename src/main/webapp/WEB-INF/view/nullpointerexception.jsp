@@ -8,7 +8,7 @@
 </head>
 <body>
 <div align = "center">
-Wrong username or password.
+<p> Null pointer exception occurred.. contact support </p>
 </div>
 </body>
 </html>

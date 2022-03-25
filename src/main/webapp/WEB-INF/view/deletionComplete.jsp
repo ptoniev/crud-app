@@ -7,11 +7,12 @@
 <title>Success</title>
 </head>
 <body>
-
+<div align = "center">
 <h1>Account deletion complete!</h1>
 <br>
 <ul>
 		<li><a href="/">Home page</a></li>
   	</ul>
+  	</div>
 </body>
 </html>

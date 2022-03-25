@@ -35,12 +35,18 @@ public HttpSession getSession(HttpServletRequest req)
     return session;
 }
 
-public boolean checkUserInfo(HttpServletRequest req){
+public boolean checkUserInput(HttpServletRequest req){
     Map<String, String> existingUsersMap = (Map<String, String>) getSession(req).getAttribute("usersMap");
    boolean checkUser = (existingUsersMap.containsKey(getUserName(req)) && existingUsersMap.containsValue(getPassword(req)));
    return checkUser;
 }
 
+public boolean checkUsersMap(HttpServletRequest req)
+{
+    Map<String, String> allUsers = (Map<String, String>) getSession(req).getAttribute("usersMap");
+    boolean checkUsers = (usersMap == null || usersMap.isEmpty());
+    return checkUsers;
+}
     public void updatePassword(HttpServletRequest req)
     {
         String newPassword;

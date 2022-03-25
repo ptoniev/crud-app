@@ -7,11 +7,12 @@
 <title>Success</title>
 </head>
 <body>
-
+<div align = "center">
 <h1>Your account was successfully created!</h1>
 <br>
 <ul>
 		<li><a href="/">Login</a></li>
   	</ul>
+  	</div>
 </body>
 </html>

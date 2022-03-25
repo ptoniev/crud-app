@@ -1,10 +1,15 @@
 package bg.proxiad.crud.controllers.login;
 
 
+import bg.proxiad.crud.exceptions.RecordNotFoundException;
 import bg.proxiad.crud.helpers.UserHelper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +18,7 @@ import java.io.IOException;
 
 @Controller
 public class UserLoginController {
-
+    //@Autowired
     UserHelper helper = new UserHelper();
 
     @GetMapping(path = "/")
@@ -24,29 +29,28 @@ public class UserLoginController {
     }
 
     @PostMapping(path = "/")
-    public ModelAndView authenticateInput(HttpServletRequest req, HttpServletResponse resp){
-        ModelAndView mv = new ModelAndView();
+    public ModelAndView authenticateInput(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         var usersMap = helper.getUsersMap(req);
-        if (usersMap == null || usersMap.isEmpty()) {
-            mv.setViewName("errorLogin");
-            return mv;
-        }
-
-        if (helper.checkUserInfo(req)) {
-            // uname is later used for the option of deleting a user after a successful login
+        if (helper.checkUserInput(req)) {
+            ModelAndView mv = new ModelAndView("existingUser");
+            // On the following row we set a uname variable into the session which we can use for
+            // delete account button once a user has logged in.
             helper.getSession(req).setAttribute("uname", helper.getUserName(req));
-            mv.setViewName("existingUser");
             return mv;
         } else {
-            mv.setViewName("errorLogin");
-            return mv;
-        }
+            throw new RecordNotFoundException();
+       }
+
     }
 
+
     @GetMapping(path = "/list-of-users")
-    public ModelAndView loadUsersPage(){
-        ModelAndView mv = new ModelAndView("listUsersJSTL");
-        return mv;
+    public ModelAndView loadUsersPage(HttpServletRequest req){
+        if(helper.checkUsersMap(req)){
+            throw new NullPointerException();
+        }
+            ModelAndView mv = new ModelAndView("listUsersJSTL");
+            return mv;
     }
 
     @GetMapping(path = "/create-account")

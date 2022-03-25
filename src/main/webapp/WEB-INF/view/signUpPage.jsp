@@ -7,6 +7,7 @@
 <title>Account Creation</title>
 </head>
 <body>
+<div align = "center">
 	<p>Lets create your new account!</p>
   
  	<form method="post" action="/create-account">
@@ -18,5 +19,6 @@
      <ul>
 		<li><a href="/">Go back</a></li>
 		</ul>
+		</div>
 </body>
 </html>

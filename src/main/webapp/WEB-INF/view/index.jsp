@@ -11,6 +11,7 @@
   </head>
  
   <body>
+  <div align = "center">
   <p>The application is up and running</p>
 	<p>Test how the user management system works</p>
   
@@ -24,5 +25,6 @@
 		<li><a href="/create-account">Sign Up</a></li>
 		<li><a href="/list-of-users">List of users</a></li>
   	</ul>
+  	</div>
   </body>
 </html>
