@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,13 +9,23 @@
 </head>
 <body>
 <div align = "center">
-<li>
-<form method="post" action="/update-username">
-  		<table> <tr><td>Enter old username</td> <td><input type="text" name="username" required></td></tr>
-  		<tr><td>Enter new username</td> <td><input type="text" name="newUsername" required></td></tr>
- 	 	<tr><td>Password</td> <td><input type="password" name="password" required></td></tr>
- 	 	 <tr><td></td> <td><button type="submit" >Confirm changes</button></td></tr> </table> </form>
- 	</li>
+
+ 	<form:form method="post" action="/update-username" modelAttribute="userInfo">
+     	<p>
+            <label for"zn">Old User name: </label>
+            <form:input  id="zn" path="uName"/>
+            </p>
+            <p>
+                        <label for"nu">New User name: </label>
+                        <form:input  id="nu" path="newUsername"/>
+                        </p>
+            <p>
+            <label for"pn">Password: </label>
+            <form:input  id="pn" type="password" path="pass"/>
+            </p>
+            <input type="submit" value="submit changes">
+            </form:form>
+
  	</div>
 </body>
 </html>

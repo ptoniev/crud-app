@@ -10,8 +10,8 @@
 <body>
 <div align = "center">
 <c:choose>
-<c:when test="${usersMap!=null}">
-<c:forEach var="entry" items="${usersMap}">
+<c:when test="${userMap!=null}">
+<c:forEach var="entry" items="${userMap}">
 User name: <c:out value="${entry.key}"/>,
  Password: <c:out value="${entry.value}"/>
 <br>

@@ -20,10 +20,10 @@ public class GlobalExceptionHandler {
         return "nullpointerexception";
     }
 
-    @ExceptionHandler(value = Exception.class)
-    public String handleAnyException(){
-        return "exception";
-    }
+//    @ExceptionHandler(value = Exception.class)
+//    public String handleAnyException(){
+//        return "exception";
+//    }
 
     @ExceptionHandler(value = RecordNotFoundException.class)
     public String RecordNotFoundException()

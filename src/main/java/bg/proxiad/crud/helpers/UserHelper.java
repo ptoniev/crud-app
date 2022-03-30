@@ -1,6 +1,8 @@
 package bg.proxiad.crud.helpers;
 
+import bg.proxiad.crud.model.UserModel;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -9,73 +11,60 @@ import java.util.TreeMap;
 
 @Component
 public class UserHelper {
-protected String userName;
-protected String password;
-Map<String, String> usersMap = new TreeMap<>();
 
-public Map<String, String> getUsersMap(HttpServletRequest req){
-    getSession(req).setAttribute("usersMap", usersMap);
-    return usersMap;
-}
+    Map<String, String> userMap = new TreeMap<>();
+    public HttpSession getSession(HttpServletRequest req)
+    {
+        HttpSession session = req.getSession();
+        return session;
+    }
+    public Map<String, String> getUserMap(HttpServletRequest req) {
+        getSession(req).setAttribute("userMap", userMap);
+        return userMap;
+    }
 
-public String getUserName(HttpServletRequest req)
-{
-    userName = req.getParameter("username");
-    return userName;
-}
+    public boolean checkUserInput(HttpServletRequest req, @ModelAttribute("userInfo") UserModel userInfo){
+        Map<String, String> existingUsersMap = getUserMap(req);
+        boolean checkUser = (existingUsersMap.containsKey(userInfo.getuName()) && existingUsersMap.containsValue(userInfo.getPass()));
+        return checkUser;
+    }
 
-public String getPassword(HttpServletRequest req){
-    password = req.getParameter("password");
-    return password;
-}
-
-public HttpSession getSession(HttpServletRequest req)
-{
-    HttpSession session = req.getSession();
-    return session;
-}
-
-public boolean checkUserInput(HttpServletRequest req){
-    Map<String, String> existingUsersMap = (Map<String, String>) getSession(req).getAttribute("usersMap");
-   boolean checkUser = (existingUsersMap.containsKey(getUserName(req)) && existingUsersMap.containsValue(getPassword(req)));
-   return checkUser;
-}
-
-public boolean checkUsersMap(HttpServletRequest req)
-{
-    Map<String, String> allUsers = (Map<String, String>) getSession(req).getAttribute("usersMap");
-    boolean checkUsers = (usersMap == null || usersMap.isEmpty());
-    return checkUsers;
-}
-    public void updatePassword(HttpServletRequest req)
+    public boolean checkUsersMap(HttpServletRequest req)
+    {
+        Map<String, String> allUsers = (Map<String, String>) getSession(req).getAttribute("userMap");
+        boolean checkUsers = (userMap == null || userMap.isEmpty());
+        return checkUsers;
+    }
+    public void updatePassword(HttpServletRequest req, @ModelAttribute("userInfo") UserModel userInfo)
     {
         String newPassword;
         newPassword = req.getParameter("newPassword");
         Map<String, String> mapUsersUpdate =
-                (Map<String, String>) getSession(req).getAttribute("usersMap");
-            mapUsersUpdate.remove(getUserName(req), getPassword(req));
-            mapUsersUpdate.put(getUserName(req), newPassword);
-            getSession(req).setAttribute("usersMap", mapUsersUpdate);
-        }
+                (Map<String, String>) getUserMap(req);
+        mapUsersUpdate.remove(userInfo.getuName(), userInfo.getPass());
+        mapUsersUpdate.put(userInfo.getuName(), newPassword);
+        getSession(req).setAttribute("userMap", mapUsersUpdate);
+    }
 
-    public void updateUsername(HttpServletRequest req)
+    public void updateUsername(HttpServletRequest req, @ModelAttribute("userInfo") UserModel userInfo)
     {
         String newUserName;
         newUserName = req.getParameter("newUsername");
         Map<String, String> mapUsersUpdate =
-                (Map<String, String>) getSession(req).getAttribute("usersMap");
-        mapUsersUpdate.remove(getUserName(req), getPassword(req));
-        mapUsersUpdate.put(newUserName, getPassword(req));
-        getSession(req).setAttribute("usersMap", mapUsersUpdate);
+                (Map<String, String>) getUserMap(req);
+        mapUsersUpdate.remove(userInfo.getuName(), userInfo.getPass());
+        mapUsersUpdate.put(newUserName, userInfo.getPass());
+        getSession(req).setAttribute("userMap", mapUsersUpdate);
     }
 
     public void deleteUser(HttpServletRequest req)
     {
-        String query = (String) getSession(req).getAttribute("uname");
+        String query = (String) getSession(req).getAttribute("usName");
         Map<String, String> mapUsersDelete =
-                (Map<String, String>) getSession(req).getAttribute("usersMap");
+                (Map<String, String>) getUserMap(req);
         mapUsersDelete.remove(query);
-        getSession(req).setAttribute("usersMap", mapUsersDelete);
+        getSession(req).setAttribute("userMap", mapUsersDelete);
 
     }
+
 }

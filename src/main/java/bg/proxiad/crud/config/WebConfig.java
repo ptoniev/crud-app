@@ -15,6 +15,7 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan("bg.proxiad.crud")
 public class WebConfig implements WebMvcConfigurer {
 //TODO read documentation about the following method
+
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("index");
