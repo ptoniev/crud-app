@@ -6,10 +6,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-     <meta charset="UTF-8">
-     <title>CRUD Application</title>
-  </head>
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
+<style>
+     .errors {
+             color:red;
+             font-size: 15px;
+         }
 
+         </style>
+</head>
   <body>
   <div align = "center">
 
@@ -20,17 +28,20 @@
     <p>
     <label for"yn">User name: </label>
     <form:input  id="yn" path="uName"/>
-    </p>
-    <p>
+    <br>
+    <form:errors path="uName" cssClass="errors"/><br>
+
     <label for"cn">Password: </label>
     <form:input  id="cn" type="password" path="pass"/>
-    </p>
-    <input type="submit" value="submit">
+    <br>
+    <form:errors path="pass" cssClass="errors"/><br>
+    <input name="login" type="submit" value="submit">
     </form:form>
-     <ul>
-		<li><a href="/create-account">Sign Up</a></li>
-		<li><a href="/list-of-users">List of users</a></li>
-  	</ul>
+
+
+		<li><a href="/create-account" >Sign Up</a></li>
+		<li><a href="/list-of-users" >List of users</a></li>
+
   	</div>
   </body>
 </html>

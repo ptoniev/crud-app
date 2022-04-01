@@ -4,6 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -11,16 +15,16 @@
 <div align = "center">
 Successfully logged in.
 <p>  </p>
-<ul>
+
 <li><a href="/">Log out</a></li>
 <br>
-<li>
+
 <form method="post" action="/delete-account">
-  <button type="submit" >Delete account</button> </form> </li>
+  <button type="submit" >Delete account</button> </form>
 <br>
 <li><a href="/update-username">Change username</a></li> 
 <li><a href="/update-password">Change password</a></li> 
-</ul>
+
 </div>
 </body>
 </html>

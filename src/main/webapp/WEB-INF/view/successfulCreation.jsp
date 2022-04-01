@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
 <meta charset="UTF-8">
 <title>Success</title>
 </head>
@@ -10,9 +14,9 @@
 <div align = "center">
 <h1>Your account was successfully created!</h1>
 <br>
-<ul>
-		<li><a href="/">Login</a></li>
-  	</ul>
+
+		<li><a href="/" name="home">Login</a></li>
+
   	</div>
 </body>
 </html>

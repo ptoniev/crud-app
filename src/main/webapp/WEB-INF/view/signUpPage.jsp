@@ -4,6 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
 <style>
     .error {
         color: red;
@@ -18,19 +22,20 @@
  	<form:form method="post" action="/create-account" modelAttribute="userInfo">
  	<label for"un">User name: </label>
         <form:input  id="un" path="uName"/>
-        </p>
+        <br>
         <form:errors path="uName" cssClass="error"/><br>
         <label path="pw">Password: </label>
         <form:input  id="pw" type="password" path="pass"/>
-        </p>
+        <br>
         <form:errors path="pass" cssClass="error"/><br>
 
- 	 	 	<input type="submit" value="create account">
+ 	 	 	<input name="create" type="submit" value="create account">
 
  	</form:form>
-     <ul>
+ 	<br>
+
 		<li><a href="/">Go back</a></li>
-		</ul>
+
 		</div>
 </body>
 </html>
