@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.IOException;
 
@@ -25,16 +25,14 @@ public class UserLoginController {
 
   @PostMapping(path = "/")
   public String authenticateInput(
-      @Valid @ModelAttribute("userInfo") UserModel userInfo,
-      BindingResult br,
-      HttpServletRequest req)
+      @Valid @ModelAttribute("userInfo") UserModel userInfo, BindingResult br, HttpSession session)
       throws IOException {
     if (br.hasErrors()) {
       return "index";
     }
-    if (helper.checkUserInput(req, userInfo)) {
+    if (helper.checkUserInput(session, userInfo)) {
       // On the next row we set this attribute so it can be used for delete account function
-      helper.getSession(req).setAttribute("usName", userInfo.getuName());
+      session.setAttribute("usName", userInfo.getuName());
       return "existingUser";
     } else {
       throw new RecordNotFoundException();
@@ -42,9 +40,8 @@ public class UserLoginController {
   }
 
   @GetMapping(path = "/list-of-users")
-  public String loadUsersPage(
-      @ModelAttribute("userInfo") UserModel userInfo, HttpServletRequest req) {
-    if (helper.checkUsersMap(req)) {
+  public String loadUsersPage(@ModelAttribute("userInfo") UserModel userInfo, HttpSession session) {
+    if (helper.checkUsersMap(session)) {
       throw new NullPointerException();
     }
     return "listUsersJSTL";
@@ -57,11 +54,9 @@ public class UserLoginController {
 
   @PostMapping(path = "/create-account")
   public String createAccount(
-      @Valid @ModelAttribute("userInfo") UserModel userInfo,
-      BindingResult br,
-      HttpServletRequest req)
+      @Valid @ModelAttribute("userInfo") UserModel userInfo, BindingResult br, HttpSession session)
       throws IOException {
-    var userMap = helper.getUserMap(req);
+    var userMap = helper.getUserMap(session);
 
     if (br.hasErrors()) {
       return "signUpPage";
@@ -70,7 +65,7 @@ public class UserLoginController {
     if (userMap.containsKey(userInfo.getuName())) {
       return "errorCreation";
     } else {
-      helper.registerUser(userInfo, req);
+      helper.registerUser(userInfo, session);
       return "successfulCreation";
     }
   }

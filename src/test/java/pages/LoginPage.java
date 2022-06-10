@@ -9,6 +9,7 @@ public class LoginPage {
   By usernameInput = By.name("uName");
   By passwordInput = By.name("pass");
   By loginButton = By.name("login");
+  By listUsersButton = By.name("list");
 
   public LoginPage(WebDriver driver) {
     this.driver = driver;
@@ -24,5 +25,9 @@ public class LoginPage {
 
   public void clickLoginButton() {
     driver.findElement(loginButton).sendKeys(Keys.RETURN);
+  }
+
+  public void clickListUsersButton() {
+    driver.findElement(listUsersButton).click();
   }
 }

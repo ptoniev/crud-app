@@ -40,7 +40,7 @@ crossorigin="anonymous">
 
 
 		<li><a href="/create-account" >Sign Up</a></li>
-		<li><a href="/list-of-users" >List of users</a></li>
+		<li><a href="/list-of-users" name="list">List of users</a></li>
 
   	</div>
   </body>

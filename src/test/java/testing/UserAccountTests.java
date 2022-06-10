@@ -20,13 +20,14 @@ public class UserAccountTests {
     // Loading the Create account page
     driver.get("http://localhost:8080/create-account");
     // Setting the text in the username and password fields
-    signUpPageObj.setUsernameTextBox("test");
+    signUpPageObj.setUsernameTextBox("test1");
     signUpPageObj.setPasswordTextBox("test");
     // submitting form and creating account
+    Thread.sleep(5000);
+
     signUpPageObj.clickCreateButton();
 
-    Thread.sleep(2000);
-    driver.close();
+    Thread.sleep(5000);
     driver.quit();
   }
 
@@ -37,13 +38,22 @@ public class UserAccountTests {
     // Loading the home login page
     driver.get("http://localhost:8080");
     // Setting the text in username and password fields
-    loginPageObj.setUsernameTextBox("test");
+    loginPageObj.setUsernameTextBox("test1");
     loginPageObj.setPasswordTextBox("test");
     // Submitting form with login button
     loginPageObj.clickLoginButton();
     System.out.println("Successful test! 2");
     Thread.sleep(5000);
-    driver.close();
+    driver.quit();
+  }
+
+  public static void displayUserList() throws InterruptedException {
+    System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+    driver = new ChromeDriver();
+    LoginPage loginPageObj = new LoginPage(driver);
+    driver.get("http://localhost:8080");
+    loginPageObj.clickListUsersButton();
+    Thread.sleep(4000);
     driver.quit();
   }
 }

@@ -16,6 +16,8 @@ crossorigin="anonymous">
 Successfully logged in.
 <p>  </p>
 
+<li><a href="/edit-profile">Edit Profile</a></li>
+
 <li><a href="/">Log out</a></li>
 <br>
 
